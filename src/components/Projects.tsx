@@ -13,7 +13,7 @@ export const Projects = () => {
       id: 1,
       title: "Blitz AI Website builder",
       image: blitz,
-      description: "A full-stack e-commerce dashboard with real-time analytics, inventory management, and sales reporting.",
+      description: "A full-stack AI Website BUilder build with GeminiAPI and uses Web-Containers to display websites.",
       techStack: ["React", "Node.js", "Typescript", "Express", "Tailwind CSS" , "Gemini API"],
       features: [
         "Visual Page Builder",
@@ -30,7 +30,7 @@ export const Projects = () => {
       id: 2,
       title: "Bloging Webiste",
       image: blog2,
-      description: "A modern chat application powered by AI, featuring real-time translation and sentiment analysis.",
+      description: "A platform for creating, sharing, and discovering written content with user-friendly publishing tools.",
       techStack: ["React.js", "TypeScript", "Prisma", "Hono" , "Clodflare" ,  "PostgreSQL"],
       features: [
         "Article Reading Time Estimator",
@@ -47,7 +47,7 @@ export const Projects = () => {
       id: 3,
       title: "Payment Application",
       image: paytm2,
-      description: "A comprehensive fitness tracking platform with workout planning, progress monitoring, and social features.",
+      description: " A secure app for seamless financial transactions, bill payments, and money transfers..",
       techStack: ["React.js", "MongoDB", "TailwindCSS", "Node.js", "Express.js"],
       features: [
         "Digital Wallet & Payment Processing",
@@ -64,7 +64,7 @@ export const Projects = () => {
       id: 4,
       title: "EdGuru- Educational Platform (under development)",
       image: otw,
-      description: "A comprehensive fitness tracking platform with workout planning, progress monitoring, and social features.",
+      description: " An interactive learning hub offering courses, resources, and tools for students and educators.",
       techStack: ["React.js", "Postgres", "TailwindCSS", "Node.js", "Express.js" , "Prisma"],
       features: [
         "Learning Management System (LMS)",
@@ -81,7 +81,7 @@ export const Projects = () => {
       id: 5,
       title: "Testimoney- Testimonial creation Webapp (under development)",
       image: otw,
-      description: "A comprehensive fitness tracking platform with workout planning, progress monitoring, and social features.",
+      description: "A tool for businesses to collect, design, and showcase client reviews effectively.",
       techStack: ["React.js", "Postgres", "TailwindCSS", "Node.js", "Express.js" , "Prisma" ],
       features: [
         "Testimonial Collection",
