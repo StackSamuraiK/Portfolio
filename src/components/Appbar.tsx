@@ -25,12 +25,12 @@ export const Appbar = () => {
 
     const socialLinks = [
         {
-            href: "https://linkedin.com/in/yourusername",
+            href: "https://www.linkedin.com/in/kshitiz-prakash-srivastava-a9b797256/",
             icon: Linkedin,
             label: "LinkedIn"
         },
         {
-            href: "https://x.com/yourusername",
+            href: "https://x.com/KshitizSri07",
             icon: XIcon,
             label: "X (Twitter)"
         }

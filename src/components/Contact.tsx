@@ -1,4 +1,4 @@
-import { Mail, MessageSquare, Phone, Send } from 'lucide-react';
+import { InstagramIcon, Mail, MessageSquare, Phone, Send } from 'lucide-react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
@@ -91,9 +91,9 @@ export const Contact = () => {
                                 </div>
                                 <div className="flex items-center space-x-4 text-zinc-300">
                                     <div className="p-3 bg-zinc-800/50 rounded-lg">
-                                        <MessageSquare className="w-5 h-5" />
+                                        <InstagramIcon className="w-5 h-5" />
                                     </div>
-                                    <span>@username</span>
+                                    <span>kshitiz.srivastav</span>
                                 </div>
                             </div>
                         </div>
