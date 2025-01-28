@@ -1,4 +1,4 @@
-import { InstagramIcon, Mail, MessageSquare, Phone, Send } from 'lucide-react';
+import { InstagramIcon, Mail, Phone, Send } from 'lucide-react';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
