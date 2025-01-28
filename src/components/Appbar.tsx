@@ -43,7 +43,6 @@ export const Appbar = () => {
             <nav className="mx-auto w-[92%] max-w-[1200px] py-4">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        {/* Social Links */}
                         {socialLinks.map((social) => (
                             <a
                                 key={social.label}
@@ -56,9 +55,8 @@ export const Appbar = () => {
                                 <social.icon className="w-5 h-5" />
                             </a>
                         ))}
-                        {/* Resume Button */}
                         <a
-                            href="https://drive.google.com/file/d/your-resume-id/view"
+                            href="https://drive.google.com/file/d/1hYRibrj7ckfwSE3J7bcErFfJPBTzP5JW/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-4 py-1.5 bg-cyan-500 text-white text-sm rounded-full hover:bg-cyan-600 transition-colors duration-300"
@@ -67,7 +65,6 @@ export const Appbar = () => {
                         </a>
                     </div>
 
-                    {/* Navigation Menu */}
                     <ul className="hidden md:flex items-center justify-center gap-8">
                         {menuItems.map((item) => (
                             <li key={item.to} className="relative group">
@@ -86,7 +83,6 @@ export const Appbar = () => {
                         ))}
                     </ul>
 
-                    {/* Mobile Menu Button */}
                     <div className="md:hidden flex justify-end">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -97,7 +93,6 @@ export const Appbar = () => {
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
                 <div className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-lg transition-transform duration-300 ${
                     isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}>
@@ -126,7 +121,6 @@ export const Appbar = () => {
                                 <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full" />
                             </li>
                         ))}
-                        {/* Mobile Social Links */}
                         <div className="flex items-center gap-6 mt-8">
                             {socialLinks.map((social) => (
                                 <a
