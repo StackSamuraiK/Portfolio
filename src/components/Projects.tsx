@@ -106,10 +106,15 @@ export const Projects = () => {
 
   return (
     <div id="projects" className="min-h-screen py-20 bg-zinc-950">
-      <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-12 text-zinc-100">My Projects</h2>
+      <div className="px-4">
+        <div className=''>
+          <h2 className="text-5xl font-bold text-center font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">My Projects</h2>
+        </div>
         
-        <div className="relative shadow-2xl shadow-zinc-600 w-full max-w-4xl mx-auto">
+        <div className="relative w-full max-w-4xl mx-auto">
+          {/* Gradient border effect */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-75"></div>
+          
           <div className="relative overflow-hidden w-full min-h-[600px] bg-zinc-900 rounded-lg shadow-xl shadow-zinc-900/50 border border-zinc-800">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -150,7 +155,7 @@ export const Projects = () => {
                             {project.techStack.map((tech, index) => (
                               <span
                                 key={index}
-                                className="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-sm border border-zinc-700"
+                                className="px-3 py-1 bg-cyan-800 text-white rounded-full text-sm border border-zinc-700"
                               >
                                 {tech}
                               </span>

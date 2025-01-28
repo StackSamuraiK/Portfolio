@@ -1,60 +1,57 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { LoadingSpinner } from '../App';
+import { Code2, Container, Terminal} from 'lucide-react';
 
 export const About = () => {
-    const { ref, inView } = useInView({
-        threshold: 0.1,
-        triggerOnce: true,
-    });
-    const Spline = React.lazy(() => import('@splinetool/react-spline'));
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-    return (
-        <div id="about" className="min-h-screen bg-zinc-950">
-            <div className="grid grid-cols-1 lg:grid-cols-6 min-h-screen">
-                {/* 3D Model Section */}
-                <div className="hidden lg:block lg:col-span-2 relative">
-                    <div className="sticky top-0 h-screen">
-                        <Suspense fallback={<LoadingSpinner />}>
-                            <Spline
-                                scene="https://prod.spline.design/fhJnFIerVuKOFqHz/scene.splinecode"
-                                onError={(e) => console.error(e)}
-                                className="w-full h-full object-contain"
-                            />
-                        </Suspense>
-                    </div>
-                </div>
-                <div
-                    ref={ref}
-                    className={`col-span-1 lg:col-span-4 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16
-                        transition-all duration-1000 ease-linear
-                        ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                >
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-center mb-8 sm:mb-12">
-                        <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            About Me
-                        </span>
-                    </h2>
-                    <div className="space-y-6 sm:space-y-8 max-w-3xl mx-auto">
-                        <div className="text-base sm:text-lg lg:text-xl text-slate-300 font-poppins leading-relaxed">
-                            <p className="mb-4">
-                                I'm A Full Stack Development Engineer, I specialize in architecting and deploying enterprise-grade applications leveraging modern cloud-native technologies. My expertise encompasses comprehensive solutions across the development spectrum, from scalable microservices to sophisticated front-end architectures.
+  const skills = [
+    { icon: <Code2 className="w-6 h-6" />, title: 'Frontend Development', description: 'Creating responsive and intuitive user interfaces' },
+    { icon: <Terminal className="w-6 h-6" />, title: 'Backend Development', description: 'Building robust and scalable server solutions' },
+    { icon: <Container className="w-6 h-6" />, title: 'DevOps', description: 'Architecting resilient infrastructure and orchestrating seamless deployments' },
+  ];
 
-                            </p>
-                            <p className="mb-4">
-                                Here's a more concise version that maintains the professional tone while being more impactful:
+  return (
+    <section ref={ref} id="about" className="py-20 bg-zinc-950 px-4">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">About Me</h2>
+          <p className="text-zinc-400 leading-relaxed font-poppins">
+          I turn ideas into reality by crafting powerful web applications and building rock-solid cloud infrastructure.
+           Whether I'm writing clean code or automating complex deployments,
+            I'm driven by the thrill of creating solutions that make a real difference. 
+            My sweet spot is combining full-stack development expertise with DevOps mastery
+             to build systems that not only work beautifully but scale effortlessly..
+          </p>
+        </motion.div>
 
-                                "With deep expertise in the MERN ecosystem, I architect robust full-stack solutions using TypeScript and Hono for backend efficiency, while leveraging React's latest features including server components for dynamic frontend experiences.
-                            </p>
-                            <p className="mb-4">
-                                My DevOps proficiency spans Docker, Kubernetes, and AWS services (EC2, S3, CloudFront), enabling the deployment of scalable, distributed systems with automated CI/CD pipelines. Experienced in both SQL and NoSQL architectures, I implement optimized data models that prioritize performance and scalability.
-
-                                Driven by technical excellence, I deliver sophisticated, maintainable solutions that align with modern engineering practices while creating measurable business impact."
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="p-6 rounded-lg bg-zinc-900/50 border border-zinc-800"
+            >
+              <div className="text-indigo-500 mb-4">{skill.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-2 font-poppins">{skill.title}</h3>
+              <p className="text-zinc-400 font-poppins">{skill.description}</p>
+            </motion.div>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
+
+export default About;

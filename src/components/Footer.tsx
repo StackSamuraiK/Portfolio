@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import SocialLink from './SocialLink';
 import XIcon from './XIcon';
 
@@ -30,6 +30,11 @@ const Footer = () => {
       icon: XIcon,
       label: "X",
       href: "https://x.com/KshitizSri07"
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      href: "kshitiz.srivastav"
     }
   ];
 

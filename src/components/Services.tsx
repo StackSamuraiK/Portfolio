@@ -6,12 +6,12 @@ export function Services() {
     const services = [
         {
             title: "Frontend Architecture",
-            description: "Creating immersive user experiences with React and modern web technologies. Focusing on performance, accessibility, and cutting-edge UI/UX.",
+            description: "Creating immersive user experiences with React and modern web technologies. Focusing on performance, accessibility, and latest UI/UX.",
             Icon: Code2
         },
         {
             title: "Backend Systems",
-            description: "Building scalable microservices and APIs using Node.js and Python. Implementing real-time features and efficient data processing.",
+            description: "Building scalable microservices and APIs using Node.js. Implementing real-time features and efficient data processing.",
             Icon: Database
         },
         {

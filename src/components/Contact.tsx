@@ -48,8 +48,6 @@ export const Contact = () => {
     return (
         <section id='contact' className="bg-zinc-950 py-20 relative overflow-hidden">
             <Toaster position="bottom-right" />
-            {/* Rest of your component remains exactly the same */}
-            {/* Futuristic background elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -72,7 +70,6 @@ export const Contact = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12">
-                    {/* Contact Info */}
                     <div className="space-y-8">
                         <div className="bg-zinc-900/50 p-6 rounded-2xl backdrop-blur-sm border border-zinc-800/50 hover:border-zinc-700/50 transition-all duration-300">
                             <h3 className="text-xl font-semibold text-white mb-6">Contact Information</h3>
@@ -99,7 +96,6 @@ export const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Contact Form */}
                     <div className="bg-zinc-900/50 p-8 rounded-2xl backdrop-blur-sm border border-zinc-800/50">
                         <script src='https://smtpjs.com/v3/smtp.js'></script>
                         <form

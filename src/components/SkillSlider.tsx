@@ -16,7 +16,7 @@ const skills = [
   'AWS',
   'Git',
   'Github',
-  'Tailwind CSS',
+  'Tailwind',
   'Recoil',
   'Postman',
   'HTML5',
@@ -28,7 +28,7 @@ const skills = [
   'CSS3',
   'Webpack',
   'Jest',
-  'CI/CD',
+  'GitLab',
 ];
 
 export function SkillsSlider() {
