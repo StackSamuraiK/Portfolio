@@ -108,7 +108,7 @@ export const Projects = () => {
     <div id="projects" className="min-h-screen py-20 bg-zinc-950">
       <div className="px-4">
         <div className=''>
-          <h2 className="text-5xl font-bold text-center font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">My Projects</h2>
+          <h2 className="text-5xl font-bold text-center mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">My Projects</h2>
         </div>
         
         <div className="relative w-full max-w-4xl mx-auto">
